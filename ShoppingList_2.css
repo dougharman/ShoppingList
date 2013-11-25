@@ -1,0 +1,291 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-size: 100%;
+	font: Times, serif;
+	vertical-align: baseline;
+}
+
+HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}	
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END OF RESET CODE */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+}
+
+.orange {
+	clear: both;
+    height: 10px;
+    width: 100%;
+    background-color: #e86425;
+    margin: 0px 10px;
+}
+
+.top_band {
+    clear: both;
+    width: 100%;
+    background-color:  #66b6cd;
+    margin: 0px 10px;
+}
+
+.bottom_band {
+    clear: both;
+    height: 100px;
+    width: 100%;
+    background-color: #e86425;
+    margin: 10px 10px;
+}
+
+h1 {
+   	font-family: 'Source Sans Pro', sans-serif;
+   	font-size: 16px;
+   	color: #074659;
+   	text-align: center;
+   	margin: 10px 10px;
+} 
+
+h2 {
+	font-family: Times, serif;
+	font-size: 36px;
+	color: white;
+	text-align: center;
+}
+
+.title {
+	font-family: Times, serif;
+	font-size: 24px;
+	color: black;
+	margin: 10px auto;
+	padding: 8px;
+	text-align: center;
+}
+
+.concepts {
+	display: block;
+	width: 200px;
+	font-family: Times, serif;
+	font-size: 16px;
+	color: black;
+	margin: 10px auto 20px auto;
+	padding: 8px;
+	text-align: center;
+}
+
+.inputBox1 {
+	display: block;
+	height: 100px;
+	width: 400px;
+	font-family: Times, serif;
+	font-size: 16px;
+	color: black;
+	margin: 10px auto 20px auto;
+	padding: 8px;
+	text-align: center;
+}
+
+h3, .unit {
+	font-family: Times, serif;
+	font-size: 16px;
+	font-weight: 600;
+	font-color: #074659;
+}
+
+h4 {
+	font-family: Times, serif;
+	font-size: 16px;
+	font-weight: 600;
+	font-color: #074659;
+}
+
+p 	{
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	color: #e86425;
+}
+
+.main li {
+	clear: both;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.syllabus, .working, .mentor {
+   
+    margin: 10px;
+    padding: 8px;
+    border: 5px solid black;
+    background-color: yellow;
+    height: auto;
+    min-height: 500px 
+}
+
+.hide {
+	display: none;
+}
+
+.inputBox2 {
+	display: block;
+	height: 100px;
+	width: 200px;
+	font-family: Times, serif;
+	font-size: 16px;
+	color: black;
+	margin: 10px auto 20px auto;
+	padding: 8px;
+	text-align: center;
+}
+
+.submitButton {
+	display: block;
+	height: 25px;
+	font-family: Times, serif;
+	font-size: 16px;
+	color: black;
+	margin: 10px auto 20px auto;
+	padding: 8px;
+	text-align: center;
+}
+
+.outputForm {
+	color: #e86425;
+	background-color: #074659;
+	margin: 5px 5px;
+	padding: 4px;
+
+}
+
+.fieldset1 {
+	display: inline-block;
+	width: 430px;
+	border: 2px double;
+	border-color: #e86425;
+	margin: 5px 5px;
+	padding: 4px;
+}
+
+.dateBox1, .lessonNumber1 {
+	clear: both;
+	display: inline-block;
+	height: 25px;
+	width: 125px;
+	font-family: Times, serif;
+	font-size: 16px;
+	color: black;
+	text-align: justify;
+	margin: 10px auto;
+	padding: 8px;
+	border: 2px;
+	border-color: black;
+	background-color: white;
+
+}
+
+.formText1 {
+	clear:both;
+	display: block;
+	min-height: 100px;
+	width: 360px;
+	font-family: Times, serif;
+	font-size: 16px;
+	color: black;
+	background-color: white;
+	margin: 10px auto;
+	padding: 8px;
+	text-align: justify;
+}
+
+.fieldset2 {
+	display: inline-block;
+	width: 215px;
+	border: 2px double;
+	border-color: #e86425;
+	margin: 5px 5px;
+	padding: 4px;
+}
+
+.dateBox2, .lessonNumber2 {
+	clear: both;
+	display: inline-block;
+	height: 25px;
+	width: 125px;
+	font-family: Times, serif;
+	font-size: 16px;
+	color: black;
+	text-align: justify;
+	margin: 10px auto;
+	padding: 8px;
+	border: 2px;
+	border-color: black;
+	background-color: white;
+
+}
+
+.formText2 {
+	clear:both;
+	display: block;
+	min-height: 100px;
+	width: 180px;
+	font-family: Times, serif;
+	font-size: 16px;
+	color: black;
+	background-color: white;
+	margin: 10px auto;
+	padding: 8px;
+	text-align: justify;
+}
+
+.delete {
+	clear: both;
+	display: block;
+	vertical-align: middle;
+	height: 25px;
+	font-family: Times, serif;
+	font-size: 16px;
+	color: black;
+	margin: 10px auto;
+	padding: 8px;
+}
+
