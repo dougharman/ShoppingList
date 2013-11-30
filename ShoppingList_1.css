@@ -57,7 +57,7 @@ body {
 
 .center {
     clear: both;
-    width: 250px;
+    width: 350px;
     background-color: yellow;
     font-family: Arial, sans-serif;
     color: black;
@@ -81,10 +81,12 @@ h3 {
 p {
     font-size: 12px;
     text-align: justify;
+    margin: 5px 10px;
+    padding: 4px;
 }
 
 .enter {
-	width: 75px;
+	width: 125px;
 	background-color: white;
 	font-weight: bold;
 	border: 2px solid red;

@@ -53,6 +53,9 @@ table {
 body {
     font-family: 'Source Sans Pro', sans-serif;
     position: relative;
+    display: inline-block;
+    width: 100%;
+    background-color: yellow;
 }
 
 .orange {
@@ -60,14 +63,14 @@ body {
     height: 10px;
     width: 100%;
     background-color: #e86425;
-    margin: 0px 10px;
+    margin: 10px auto 10px auto;
 }
 
 .top_band {
     clear: both;
     width: 100%;
     background-color:  #66b6cd;
-    margin: 0px 10px;
+    margin: 10px auto 10px auto;
 }
 
 .bottom_band {
@@ -75,7 +78,7 @@ body {
     height: 100px;
     width: 100%;
     background-color: #e86425;
-    margin: 10px 10px;
+    margin: 10px auto 10px auto;
 }
 
 h1 {
@@ -113,18 +116,6 @@ h2 {
 	text-align: center;
 }
 
-.inputBox1 {
-	display: block;
-	height: 100px;
-	width: 400px;
-	font-family: Times, serif;
-	font-size: 16px;
-	color: black;
-	margin: 10px auto 20px auto;
-	padding: 8px;
-	text-align: center;
-}
-
 h3, .unit {
 	font-family: Times, serif;
 	font-size: 16px;
@@ -146,6 +137,10 @@ p 	{
 	color: #e86425;
 }
 
+ul {
+	margin-left: 10px;
+}
+
 .main li {
 	clear: both;
     display: inline-block;
@@ -153,29 +148,54 @@ p 	{
 }
 
 .syllabus, .working, .mentor {
-   
-    margin: 10px;
-    padding: 8px;
+    margin: 10px 5px 10px auto;
+    padding: 2px;
     border: 5px solid black;
-    background-color: yellow;
     height: auto;
-    min-height: 500px 
+    min-height: 500px;
+    background-color: white;
+}
+
+.syllabus {
+	width: 35%;
+}
+
+.working {
+	width: 35%;
+}
+
+.mentor {
+	width: 25%;
 }
 
 .hide {
 	display: none;
 }
 
-.inputBox2 {
-	display: block;
+.inputBox1 {
+	display: inline-block;
 	height: 100px;
-	width: 200px;
+	width: 400px;
 	font-family: Times, serif;
 	font-size: 16px;
 	color: black;
-	margin: 10px auto 20px auto;
-	padding: 8px;
+	margin: 5px auto 5px auto;
+	padding: 4px;
 	text-align: center;
+	vertical-align: 50%;
+}
+
+.inputBox2 {
+	display: block;
+	height: 100px;
+	width: 275px;
+	font-family: Times, serif;
+	font-size: 16px;
+	color: black;
+	margin: 5px auto 10px auto;
+	padding: 4px;
+	text-align: center;
+	vertical-align: 50%;
 }
 
 .submitButton {
@@ -189,45 +209,37 @@ p 	{
 	text-align: center;
 }
 
-.outputForm {
+.in_Form1, .out_Form1, .in_Form2, .out_Form2 {
 	color: #e86425;
 	background-color: #074659;
-	margin: 5px 5px;
-	padding: 4px;
-
 }
 
 .fieldset1 {
 	display: inline-block;
-	width: 430px;
 	border: 2px double;
 	border-color: #e86425;
-	margin: 5px 5px;
-	padding: 4px;
+	margin: 10px 5px;
+	padding: 8px;
 }
 
-.dateBox1, .lessonNumber1 {
+.in_dateBox1, .in_lessonBox1 {
 	clear: both;
-	display: inline-block;
+	display: block;
 	height: 25px;
-	width: 125px;
+	width: 175px;
 	font-family: Times, serif;
 	font-size: 16px;
 	color: black;
-	text-align: justify;
-	margin: 10px auto;
+	margin: 10px auto 20px auto;
 	padding: 8px;
-	border: 2px;
-	border-color: black;
-	background-color: white;
-
+	text-align: center;
 }
 
-.formText1 {
+.outputBox1 {
 	clear:both;
 	display: block;
 	min-height: 100px;
-	width: 360px;
+	width: 400px;
 	font-family: Times, serif;
 	font-size: 16px;
 	color: black;
@@ -239,35 +251,31 @@ p 	{
 
 .fieldset2 {
 	display: inline-block;
-	width: 215px;
 	border: 2px double;
 	border-color: #e86425;
-	margin: 5px 5px;
-	padding: 4px;
+	margin: 10px 5px;
+	padding: 8px;
 }
 
-.dateBox2, .lessonNumber2 {
+.in_dateBox2, .in_lessonBox2 {
 	clear: both;
-	display: inline-block;
+	display: block;
 	height: 25px;
 	width: 125px;
 	font-family: Times, serif;
 	font-size: 16px;
 	color: black;
-	text-align: justify;
-	margin: 10px auto;
+	margin: 10px auto 20px auto;
 	padding: 8px;
-	border: 2px;
-	border-color: black;
-	background-color: white;
+	text-align: center;
 
 }
 
-.formText2 {
+.outputBox2 {
 	clear:both;
 	display: block;
 	min-height: 100px;
-	width: 180px;
+	width: 275px;
 	font-family: Times, serif;
 	font-size: 16px;
 	color: black;

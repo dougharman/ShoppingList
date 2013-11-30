@@ -3,15 +3,16 @@
 	<meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="ShoppingList_2.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-	<script language="javascript" type="text/javascript" src="ShoppingList2.js"></script>
+	<script language="javascript" type="text/javascript" src="ShoppingList_2.js"></script>
 	<title>ShoppingList</title>
 </head>
 
 <body>
-	<div class="page-background" src="file:///Users/dougharman/Dropbox/ShoppingList/images/thinkful_bg.jpg" >
-        <h1><img src="file:///Users/dougharman/Dropbox/ShoppingList/images/thinkful_favicon.ico">hinkful</h1>
+	<div>
+<!--        <h1><img src="file:\\\C:documents\dougharman\dropbox\public\ShoppingList\images\Thinkful_favicon.ico">hinkful</h1>  -->
     </div>
 
     <div class="orange"></div>
@@ -29,157 +30,112 @@
             <br/>
             <br/>
             <p class="unit">UNIT 1: Basic Web Sites and Core Development Tools</p>
-            <div class="lesson">
-                <h4>LESSON 0: Introduction</h4>
-                <h4>LESSON 1: Introducing HTML</h4>
-                    <p>Assignment 1: How the Web Works</p>
-                    <p>Assignment 2: Treehouse - Introduction to HTML</p>
-                    <p>Assignment 3: Codecademy - HTML Basics</p>
-                <h4>LESSON 2: Introducing CSS and Style Basics</h4>
-                    <p>Assignment 1: Get Started with CSS Basics</p>
-                    <p>Assignment 2: Three Ways of Styling</p>
-                    <p>Assignment 3: Codecademy - CSS Basics</p>                     
-                <h4>LESSON 3: The Box Model and Positioning</h4>
-                    <p>Assignment 1: Codecademy - CSS Positioning</p>
-                    <p>Assignment 2: Chrome Developer Tools Teaser</p>
-                    <p>Assignment 3: Beginning CSS</p>
-                <h4>LESSON 4: Looking Under The Hood with Chrome<br/>Developer Tools</h4>
-                    <p>Assignment 1: Codeschool - Developer Tools</p>
-                    <p>Assignment 2: Try it Out!</p>
-                <h4>LESSON 5: Putting It Together in Your First Website</h4>
-                    <p>Assignment 1: CSS Revisited</p>
-                    <p>Assignment 2: Recreate the Google Home Page</p>    
-                <h4>LESSON 6: Diving Deeper into HTML and CSS</h4>
-                    <p>Assignment 1: More Advanced CSS Techniques</p>
-                    <p>Assignment 2: Recreate the 37 Signals Homepage</p>  
-                <h4>LESSON 7: Intro to Git and GitHub</h4>
-                    <p>Assignment 1: Basic Revision Control</p>
-                    <p>Assignment 2: Creating a Github account</p>
-                    <p>Assignment 3: First Steps with Git and Github</p>
-                    <p>Assignment 4: Using Github Pages to Host Static Web Pages</p>
-            </div>
             <br/>
-            <br/>
-            <p class="unit">UNIT 2:Javascript and jQuery Fundamentals</p>
-            <div class="lesson">
-                <h4 class="U2-L3-C hide">LESSON 3: Data Types, Operators and Deeper<br/>into Functions in Javascript
-                    <div>
-                        <p>Concept: Pure function</p>
-                        <p>Reading reference: url="http://eloquentjavascript.net/chapter3.html"</p>
-                        <p>Further reading: Why are pure functions called pure?<br/>http://stackoverflow.com/questions/7750533/why-are-pure-functions-called-pure</p>
-                        <p>Further reading: How to parse pure functions<br/>http://stackoverflow.com/questions/14353978/how-to-parse-pure-functions</p>
-                    </div>
-                    <div>
-                        <p>Concept: Recursive function</p>
-                        <p>Reading reference: url="http://eloquentjavascript.net/chapter3.html"</p>
-                        <p>Further reading: None</p>
-                        <p>Further reading: None</p>
-                    </div>
-                     <div>
-                        <p>Concept: Anonymous function</p>
-                        <p>Reading reference: url="http://eloquentjavascript.net/chapter3.html"</p>
-                        <p>Further reading: How does an anonymous function in JavaScript work?<br/>http://stackoverflow.com/questions/1140089/how-does-an-anonymous-function-in-javascript-work</p>
-                        <p>Further reading: None</p>
-                    </div>
-                </h4>    
+            <p class="unit">UNIT 2: Javascript and jQuery Fundamentals</p>
+            <div class="U2-L3-C">LESSON 3: Data Types, Operators and Deeper into Functions in Javascript:</div>
+            <div class="review hide" style="color: red">REVIEW of CONCEPTS
+                <h4>Concept: <span style="color: #074659">Pure function</span></h4>
+                    <ul>
+                        <li>Reading reference: <a href="http://eloquentjavascript.net/chapter3.html">Eloquent JavaScript, Chapter 3</a></li>
+                        <li>Further reading: <a href="http://stackoverflow.com/questions/7750533/why-are-pure-functions-called-pure">Why are pure functions called pure?</a></li>
+                        <li>Further reading:<a href="http://stackoverflow.com/questions/14353978/how-to-parse-pure-functions">How to parse pure functions</a></li>
+                    </ul>
+                <h4>Concept: <span style="color: #074659">Recursive function</span></h4>   
+                    <ul>
+                        <li>Reading reference: <a href="http://eloquentjavascript.net/chapter3.html">Eloquent JavaScript, Chapter 3</a></li>
+                        <li>Further reading: <span style="color: #074659">None</span></li>
+                        <li>Further reading: <span style="color: #074659">None</span></li>
+                    </ul>
+                <h4>Concept: <span style="color: #074659">Anonymous function</span></h4>    
+                     <ul>
+                        <li>Reading reference: <a href="http://eloquentjavascript.net/chapter3.html">Eloquent JavaScript, Chapter 3</a></li>
+                        <li>Further reading: <a href="http://stackoverflow.com/questions/1140089/how-does-an-anonymous-function-in-javascript-work">How does an anonymous function in JavaScript work?</a></li>
+                        <li>Further reading: <span style="color: #074659">None</span></li>
+                    </ul>
             </div>
         </li>
         <li class="working">
             <p class="title">"WORKING"</p>
-            <form class="inputForm1">
+            <form class="in_Form1">
                 <fieldset class="fieldset1">
                     <legend class="legend"></legend>
-                    <label>Lesson: <input class="dateBox1" type="text"><span>  </span>Date: <input class="lessonNumber1" type="text"></label>
+                    
+<!-- I set up the Lesson and Date fields as inputs before I changed course and decided to make Working a
+     rather simple list with elements added, deleted, checked off, etc.  -->
+                    <label>Lesson: <input class="in_lessonBox1" type="text"></label>
                     <br/>
-                    <input class="inputBox1" type="text" placeholder="Your Question or Note">
+                    <label>To be Completed by: <input class="in_dateBox1" type="text"  placeholder="mm/dd/yyyy"></label>
+                    <br/>
+                    <textarea class="inputBox1" type="text" placeholder="Your Question or Note"></textarea>
                     <input class="submitButton" type="submit" name="Submit" value="Submit to Save">
                 </fieldset>
             </form>
             <br/>
             <br/>
-            <p class="unit">UNIT 2:Javascript and jQuery Fundamentals</p>
-            <div class="lesson">
+            <p class="unit">UNIT 2: Javascript and jQuery Fundamentals</p>
+           
+            <div>
                 <h4>LESSON 0: Introduction</h4>
+                    <ul></ul>
                 <h4>LESSON 1: Diving into jQuery</h4>
-                    <p>Learn about the DOM</p>
-                    <p>Learn jQuery Fundamentals with Codecademy</p>
-                    <p>Dig Deeper into jQuery</p>
-                    <p>Get to Know the jQuery Documentation</p>
-                    <p>37signals Revisited</p>
+                    <ul>
+                        <li>Learn about the DOM</li>
+                        <li>Learn jQuery Fundamentals with Codecademy</li>
+                        <li>Dig Deeper into jQuery</li>
+                        <li>Get to Know the jQuery Documentation</li>
+                        <li>37signals Revisited</li>
+                    </ul>
                 <h4>LESSON 2: Functions, Control Flow, and Objects in Javascript</h4>
-                    <p>Codecademy - Javascript</p>
-                    <p>Using Chrome DevTools for Javascript</p>
-                <h4 class="U2-L3" url="http://www.thinkful.com/courses/FEWD-001/unit/2/lesson/3">LESSON 3: Data Types, Operators and Deeper into Functions<br/>in Javascript</h4>
-                    <p url="http://eloquentjavascript.net/contents.html">Eloquent Javascript</p>
-                    <p>Project 2: Javascript &#8220;Hot or Cold&#8221; (a.k.a. &#8220;Huckle Buckle Beanstalk&#8221;)</p>
-                <h4 class="U2-L4" url=http://www.thinkful.com/courses/FEWD-001/unit/2/lesson/4>LESSON 4: Objects and Arrays in Javscript and jQuery</h4>
-                    <p url"http://eloquentjavascript.net/chapter4.html">More Eloquent Javascript</p>
-                    <p>Create a Shopping List Web App</p>
+                     <ul>
+                        <li>Codecademy - Javascript</li>
+                        <li>Using Chrome DevTools for Javascript</li>
+                    </ul>
+                <h4 class="U2-L3 finish"><a href="http://www.thinkful.com/courses/FEWD-001/unit/2/lesson/3">LESSON 3: Data Types, Operators and Deeper into Functions in Javascript</a></h4>
+                    
+<!-- Marking complete triggers a toggle that hides the Working lesson plan and opens Review of Concepts in Syllabus -->
+                    <ul class="finish"><input class="check" type="checkbox">Mark Complete<br/>
+                        <li><a href="http://eloquentjavascript.net/contents.html">Eloquent Javascript</a></li>
+                        <li>Project 2: Javascript &#8220;Hot or Cold&#8221; (a.k.a. &#8220;Huckle Buckle Beanstalk&#8221;)</li>
+                    </ul>
+                <h4><a href=http://www.thinkful.com/courses/FEWD-001/unit/2/lesson/4>LESSON 4: Objects and Arrays in Javscript and jQuery</a></h4>
+                    <ul>
+                        <li><a href"http://eloquentjavascript.net/chapter4.html">More Eloquent Javascript</a></li>
+                        <li>Create a Shopping List Web App</li>
+                    </ul>
             </div>
             <br/>
             <br/>
             <input class="delete" type="submit" value="Submit to Delete Checked Items">
-            <form class="outputForm">
-                <fieldset class="fieldset1">
-                    <legend class="legend"><input class="check" type="checkbox">Question and / or Note:</legend>
-                    <label>Lesson: <input class="dateBox1" type="text"><span>  </span>Date: <input class="lessonNumber1" type="text"></label>
-                    <br/>
-                    <label class="formText1" type="text"></label>
-                </fieldset>
-            </form>
-            <form class="outputForm">
-                <fieldset class="fieldset1">
-                    <legend class="legend"><input class="check" type="checkbox">Question and / or Note:</legend>
-                    <label>Lesson: <input class="dateBox1" type="text"><span>  </span>Date: <input class="lessonNumber1" type="text"></label>
-                    <br/>
-                    <label class="formText1" type="text"></label>
-                </fieldset>
-            </form>
-            <form class="outputForm">
-                <fieldset class="fieldset1">
-                    <legend class="legend"><input class="check" type="checkbox">Question and / or Note:</legend>
-                    <label>Lesson: <input class="dateBox1" type="text"><span>  </span>Date: <input class="lessonNumber1" type="text"></label>
-                    <br/>
-                    <label class="formText1" type="text"></label>
-                </fieldset>
+            <form>
+                <span1></span>
+                <span2></span>
+                <span3></span>
+                <span4></span4>
             </form>
         </li>  
         <li class="mentor">
             <p class="title">MENTOR ADVICE</p>
-            <form class="inputForm">
+            <form class="in_Form2">
                 <fieldset class="fieldset2">
                     <legend class="legend"></legend>
-                    <label>Lesson: <input class="in_dateBox2" type="text"></label>
-                    <label>Date: <input class="in_lessonNumber2" type="text"></label>
+                    <label>Lesson: <input class="in_lessonBox2" type="text"></label>
                     <br/>
-                    <input class="inputBox2" type="text" placeholder="Mentor's Recommendations">
+                    <label>Date: <input class="in_dateBox2" type="text" placeholder="mm/dd/yyyy"></label>
+                    <br/>
+                    <textarea class="inputBox2" type="text" placeholder="Mentor's Recommendations"></textarea>
                     <input class="submitButton" type="submit" name="Submit" value="Submit to Save"> 
                 </fieldset>
             </form>
             <br/>
             <br/>    
-            <form class="outputForm">
+            <form class="out_Form2">
                 <fieldset class="fieldset2">
                     <legend class="legend"><input class="check" type="checkbox">Mentor's Feedback:</legend>
-                    <label>Lesson: <input class="out_dateBox2" type="text"><span>  </span>Date: <input class="out_lessonNumber2" type="text"></label>
+                    <label class="lesson2">Lesson: <span></span></label>
                     <br/>
-                    <label class="outputBox2" type="text"></label>
-                </fieldset>
-            </form>
-            <form class="outputForm">
-                <fieldset class="fieldset2">
-                    <legend class="legend"><input class="check" type="checkbox">Mentor's Feedback:</legend>
-                    <label>Lesson: <input class="out_dateBox2" type="text"><span>  </span>Date: <input class="out_lessonNumber2" type="text"></label>
+                    <label class="date2">Date: <span></span></label>
                     <br/>
-                    <label class="outputBox2" type="text"></label>
-                </fieldset>
-            </form>
-            <form class="outputForm">
-                <fieldset class="fieldset2">
-                    <legend class="legend"><input class="check" type="checkbox">Mentor's Feedback:</legend>
-                    <label>Lesson: <input class="dateBox2" type="text"><span>  </span>Date: <input class="lessonNumber2" type="text"></label>
-                    <br/>
-                    <label class="formText2" type="text"></label>
+                    <textarea class="outputBox2" type="text"></textarea>
                 </fieldset>
             </form>
         </li>
