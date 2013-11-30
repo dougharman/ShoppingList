@@ -55,11 +55,8 @@ $(document).ready(function () {
 
 
         $("form").addClass("out_Form1"); 
-        $("span1").addClass("fieldset1");
-        $("span2").addClass("fieldset1, legend1");
-       
-        $("span3").addClass("fieldset1, legend1, outputBox1");
-        $("span4").append("textarea");
+        $("div1").addClass("fieldset1");
+        $("div1.fieldset1").replaceWith('<fieldset class="fieldset1"><legend class="legend1"><input class="check" type="checkbox">Student Question or Note:</legend><br><textarea class="outputBox1"></textarea></fieldset>');
   
       
 
