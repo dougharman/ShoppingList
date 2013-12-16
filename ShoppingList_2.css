@@ -107,14 +107,24 @@ h2 {
 
 .concepts {
 	display: block;
-	width: 200px;
+	width: 250px;
 	font-family: Times, serif;
-	font-size: 16px;
+	font-size: 20px;
 	color: black;
 	margin: 10px auto 20px auto;
 	padding: 8px;
 	text-align: center;
 }
+
+#cse {
+	display: block;
+	width: 80%; 
+	font-family: Arial, sans-serif;
+	border: 0 none;
+	margin: auto auto;
+}
+
+
 
 h3, .unit {
 	font-family: Times, serif;
@@ -198,7 +208,7 @@ ul {
 	vertical-align: 50%;
 }
 
-.submitButton {
+.submitButton, .submitButton1, .submitButton2 {
 	display: block;
 	height: 25px;
 	font-family: Times, serif;
@@ -286,7 +296,7 @@ ul {
 	text-align: justify;
 }
 
-.delete {
+.deleteButton1, .deleteButton2 {
 	clear: both;
 	display: block;
 	vertical-align: middle;
@@ -298,7 +308,7 @@ ul {
 	padding: 8px;
 }
 
-.checked {
-	
+.hide {
+	display: none;
 }
 

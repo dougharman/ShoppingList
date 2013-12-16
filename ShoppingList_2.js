@@ -1,98 +1,122 @@
 
 
-function newForm(question) {
-    $(".out_Form1 li:last").append('<form class="form1"><fieldset class="fieldset1"><legend class="legend1"><input class="studentQuestion" type="checkbox">Student Question or Note number: </legend><textarea></textarea></fieldset></form>');
+// Student Question or Note  
+function newForm1 (question) {
+    event.preventDefault();  
+    $(".out_Form1 li:last").append('<form class="form1"><fieldset class="fieldset1"><legend class="legend1"><input class="studentQuestion" type="checkbox">Student Question or Note</legend><textarea></textarea></fieldset></form>');
     $("ul.out_Form1>li>form:last>fieldset>textarea").addClass("outputBox1");
-
-// Question number will equal index value in the array
-// Tied the following two lines with no success
-/*    var elements = $("ul.out_Form1").get("form1");
-    var q = jQuery.makeArray(elements); */
-
-// Next iteration - working from example for .toArray() found in jQuery api 
-// The statement $(".form1").toArray(); returns a horizontal array of three; placing it in brackets "[]" give me a vertical array.  I still
-// can't count it! var "q" comes back undefined. Also, q.length give "q" undefined
-/*      var q = [$(".form1").toArray()];
-        var numberOfQuestions = q.length;
-        var questionNumber = q.length[-1];
-*/
-// next try combine toArray and length
-
-    var numberOfQuestions = $(".form1").toArray().length;    // now, this works
-//  var questionNumber = $(".form1").toArray().length[-1];   // and this doesn't, so we'll replace questionNumber in the following with numberOfQuestion[-1]
-//  still not working
-
-//  work-around follows - it didn't work - responds NaN in legend line
-    $("ul.out_Form1>li>form:last>fieldset>legend").append("<span>" + ($(".form1").toArray().length)-1 + "</span>");
-
-//  While this hasn't worked - yet - I think I'm headed in the right direction.  My goal is to use the array index number as the question number.  Then,
-//  when a question is checked, I can delete it by array index number
-//  Questions:  How do I assign a variable name, e.g., "q", to the array created by .toArray(); alternatively does the method's output have a name
-//              so I can get the last item's index number 
 
     var toAdd_Text = $(".inputBox1").val();
     $("ul.out_Form1>li>form:last>fieldset>textarea").val(toAdd_Text);
-    $(".inputBox1").val("");  
-
+    $(".inputBox1").val(""); 
 }
+
+// Mentor's Feedback
+function newForm2 (question) {
+    event.preventDefault();
+    $(".out_Form2 li:last").append('<form class="form2"><fieldset class="fieldset2"><legend class="legend2"><input class="mentorFeedback" type="checkbox">Mentor&#180;s Feedback</legend><textarea></textarea></fieldset></form>');
+    $("ul.out_Form2>li>form:last>fieldset>textarea").addClass("outputBox2");
+
+    var toAdd_Text = $(".inputBox2").val();
+    $("ul.out_Form2>li>form:last>fieldset>textarea").val(toAdd_Text);
+    $(".inputBox2").val(""); 
+}
+
+// Search function for Syllabus
+
+var customSearchControl = new google.search.CustomSearchControl();          // Won't accept URL for the custom search engine
+customSearchControl.draw("cse");                                            // Will try after loading to GitHub
+
+
 
 
 $(document).ready(function () {
+    event.preventDefault();
 
 //  When a student checks the box "Mark Complete", the Working lesson closes and Review of Concepts opens in the first column
-    $( ".review" ).accordion({collapsible: true});
+    $( ".review" ).accordion({collapsible: true, heightStyle: "content"});
 
     $(".finish").click(function() {
         $(".finish, .review").toggleClass("hide");
     });
 
 
-// Validate the "To Be Completed by Date" 
-// Not sure how to validate the expression validDateFormat.  Code below doesn't work.                     
-/*    $(".in_dateBox1").mouseleave(function() {
-        var toAdd_Date = $(".in_dateBox1").val();
-        var validDateFormat = /^\d{2}\d{2}\d{4}$/
-
-        if (validDateFormat == false) {
+// Validate the "To Be Completed by Date"              
+/*   $(".in_dateBox1").mouseleave(function() {                           // Set-up for .in_dateBox1 and .in_dateBox2
+        var toAdd_Date = $(".in_dateBox1").val();                       // Format is good
+        var validDateFormat = /^(\d{2})-(\d{2})-(\d{4})$/               // Is returning the wrong error message ("alert")!!!
+                                                                        // Need to fix and then add to Student Question or Note and 
+        if (validDateFormat == false) {                                 // Mentor's Feedback
             alert("Invalid Date Format.  Please correct.");
         }
         else {
             return toAdd_Date;
         } 
-    });  */
+    });
+*/
 
 // Save the student's Question or Note if they press Enter rather than click Submit
-    $("#inputBox").keydown(function (event) {
+    $(".inputBox1").keydown(function (event) {
         if (event.which == 13) {
-            event.preventDefault();
-// I'm not real sure I understand "!$.trim".  After looking at the "offical" answer, I Googled for examples of validating text and read the jQuery API
         if (!$.trim($(".inputBox1").val())) {
             alert("Please enter a Question or Note.");
         } else {
-            newForm($("#inputBox").val());
+            newForm1($(".inputBox1").val());
+            $(".deleteButton1").removeClass("hide");
         }
     }
     });
 
 // Save the student's Question or Note when they click submit
-    $(".submitButton").click(function () {
-        event.preventDefault();
+    $(".submitButton1").click(function () {
         if (!$.trim($(".inputBox1").val())) {
             alert("Please enter a Question or Note.");
         } else {
-            newForm($("#inputBox").val());
+            newForm1($(".inputBox1").val());
+            $(".deleteButton1").removeClass("hide");
         }
 
     });
 
-
 // To delete checked questions
-    $("input").click(function() {
-        event.preventDefault();
-//  This didn't work.  I need to access the form number assigned by the array.
-/*      $(this).closest("form").addClass("checked");  */
+    $(".deleteButton1").click(function() {
+        $("input.studentQuestion:checked").closest("form").remove();
+/*        if (newForm1.length = [0]) {                                      // To hide submit buttom after deleting all Student Question or Note's
+            $(".deleteButton1").addClass("hide");                           // Code isn't working.  While newForm1 is an array, I'm
+        }  */                                                               // not reading it correctly
     });
 
+// Save the Mentor's Feedback if they press Enter rather than click Submit
+    $(".inputBox2").keydown(function (event) {
+        if (event.which == 13) {
+        if (!$.trim($(".inputBox2").val())) {
+            alert("Please enter a Question or Note.");
+        } else {
+            newForm2($(".inputBox2").val());
+            $(".deleteButton2").removeClass("hide");
+
+        }
+    }
+    });
+
+// Save the Mentor's Feedback when they click submit
+    $(".submitButton2").click(function () {
+        if (!$.trim($(".inputBox2").val())) {
+            alert("Please enter a Question or Note.");
+        } else {
+            newForm2($(".inputBox2").val());
+            $(".deleteButton2").removeClass("hide");
+        }
+
+    });
+
+// To delete checked questions
+    $(".deleteButton2").click(function() {
+        $("input.mentorFeedback:checked").closest("form").remove();
+/*        if (newForm2.length = [0]) {                                      // See above
+            $(".deleteButton2").addClass("hide");
+        }  */
+    });
 
 
 });

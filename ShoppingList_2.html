@@ -1,18 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <link type="text/css" rel="stylesheet" href="ShoppingList_2.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('search', '1', {style: google.loader.themes.MINIMALIST});
+        google.setOnLoadCallback(function(){
+          new google.search.CustomSearchControl().draw("cse");
+        }, true);
+    </script>
 	<script language="javascript" type="text/javascript" src="ShoppingList_2.js"></script>
 	<title>ShoppingList</title>
 </head>
 
 <body>
 	<div>
-<!--        <h1><img src="file:\\\C:documents\dougharman\dropbox\public\ShoppingList\images\Thinkful_favicon.ico">hinkful</h1>  -->
+       <h1><img src="file:\\\Users\dougharman\dropbox\public\ShoppingList\images\Thinkful_favicon.ico">hinkful</h1>
     </div>
 
     <div class="orange"></div>
@@ -24,9 +32,11 @@
 
     <section class="main">
         <li class="syllabus"> 
-            <p class="title">STUDENT PROGRESS</p> 
-            <input class="concepts" type="text" placeholder="Search for Concepts Learned">
-            <input class="submitButton" type="submit" name="Submit" value="Submit to Search">
+            <p class="title">STUDENT PROGRESS</p>
+            <div class="concepts">Search for a Concept</div>
+            <div id="cse">Loading...</div>
+            <br/>
+            <br/>
             <br/>
             <br/>
             <p class="unit">UNIT 1: Basic Web Sites and Core Development Tools</p>
@@ -52,6 +62,7 @@
                         <li>Further reading: <a href="http://stackoverflow.com/questions/1140089/how-does-an-anonymous-function-in-javascript-work">How does an anonymous function in JavaScript work?</a></li>
                         <li>Further reading: <span style="color: #074659">None</span></li>
                     </ul>
+                Search terms: addClass removeClass function 
             </div>
         </li>
         <li class="working">
@@ -67,7 +78,7 @@
                     <label>To be Completed by: <input class="in_dateBox1" type="text"  placeholder="mm/dd/yyyy"></label>
                     <br/>
                     <textarea class="inputBox1" type="text" placeholder="Your Question or Note"></textarea>
-                    <input class="submitButton" type="submit" name="Submit" value="Submit to Save">
+                    <input class="submitButton1" type="submit" name="Submit" value="Submit to Save">
                 </fieldset>
             </form>
             <br/>
@@ -93,7 +104,7 @@
                 <h4 class="U2-L3 finish"><a href="http://www.thinkful.com/courses/FEWD-001/unit/2/lesson/3">LESSON 3: Data Types, Operators and Deeper into Functions in Javascript</a></h4>
                     
 <!-- Marking complete triggers a toggle that hides the Working lesson plan and opens Review of Concepts in Syllabus -->
-                    <ul class="finish"><input class="check" type="checkbox">Mark Complete<br/>
+                    <ul class="finish"><input class="check" type="checkbox"><span style="color: red">Mark Complete</span><br/>
                         <li><a href="http://eloquentjavascript.net/contents.html">Eloquent Javascript</a></li>
                         <li>Project 2: Javascript &#8220;Hot or Cold&#8221; (a.k.a. &#8220;Huckle Buckle Beanstalk&#8221;)</li>
                     </ul>
@@ -106,7 +117,7 @@
             <br/>
             <br/>
             <div>
-                <input class="delete" type="submit" value="Submit to Delete Checked Items">
+                <input class="deleteButton1 hide" type="submit" value="Submit to Delete Checked Items">
             </div>
             <div>
                 <ul class="out_Form1">
@@ -126,21 +137,21 @@
                     <label>Date: <input class="in_dateBox2" type="text" placeholder="mm/dd/yyyy"></label>
                     <br/>
                     <textarea class="inputBox2" type="text" placeholder="Mentor's Recommendations"></textarea>
-                    <input class="submitButton" type="submit" name="Submit" value="Submit to Save"> 
+                    <input class="submitButton2" type="submit" name="Submit" value="Submit to Save"> 
                 </fieldset>
             </form>
             <br/>
             <br/>    
-            <form class="out_Form2">
-                <fieldset class="fieldset2">
-                    <legend class="legend"><input class="check" type="checkbox">Mentor's Feedback:</legend>
-                    <label class="lesson2">Lesson: <span></span></label>
-                    <br/>
-                    <label class="date2">Date: <span></span></label>
-                    <br/>
-                    <textarea class="outputBox2" type="text"></textarea>
-                </fieldset>
-            </form>
+            <div>
+                <input class="deleteButton2 hide" type="submit" value="Submit to Delete Checked Items">
+            </div>
+            <div>
+                <ul class="out_Form2">
+                    <li>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
         </li>
     </section>
     <div class="bottom_band">
