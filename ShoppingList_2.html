@@ -1,26 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="ShoppingList_2.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-        google.load('search', '1', {style: google.loader.themes.MINIMALIST});
-        google.setOnLoadCallback(function(){
-          new google.search.CustomSearchControl().draw("cse");
-        }, true);
-    </script>
 	<script language="javascript" type="text/javascript" src="ShoppingList_2.js"></script>
 	<title>ShoppingList</title>
 </head>
 
 <body>
 	<div>
-       <h1><img src="file:\\\Users\dougharman\dropbox\public\ShoppingList\images\Thinkful_favicon.ico">hinkful</h1>
+       <h1><img src="Thinkful_favicon.ico">hinkful</h1>
     </div>
 
     <div class="orange"></div>
@@ -33,8 +25,8 @@
     <section class="main">
         <li class="syllabus"> 
             <p class="title">STUDENT PROGRESS</p>
-            <div class="concepts">Search for a Concept</div>
-            <div id="cse">Loading...</div>
+            <input class="concepts" type="text" Placeholder="Search for a Concept">
+
             <br/>
             <br/>
             <br/>

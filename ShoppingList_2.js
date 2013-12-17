@@ -22,14 +22,6 @@ function newForm2 (question) {
     $(".inputBox2").val(""); 
 }
 
-// Search function for Syllabus
-
-var customSearchControl = new google.search.CustomSearchControl();          // Won't accept URL for the custom search engine
-customSearchControl.draw("cse");                                            // Will try after loading to GitHub
-
-
-
-
 $(document).ready(function () {
     event.preventDefault();
 
